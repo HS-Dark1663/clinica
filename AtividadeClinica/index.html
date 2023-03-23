@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.ico" type="imagem/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Clinica Bom Coração</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2 class="titulo">Clinica Bom Coração</h2>
+        </div>
+    </header>
+<hr>
+<br>
+    <main>
+        <section class="container">
+            <h2>Pacientes</h2>
+            <label for="Nome" class="form-label">filtrar</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Digite o seu nome">
+            <table class="table">
+<br>
+                <thead>
+                    <tr style="background-color: gray;">
+                        <th>Nome do Paciente</th>
+                        <th>Nome do Médico</th>
+                        <th>Horário da consulta</th>
+                        <th>Data da consulta</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-pacientes">
+                  <tr>
+                    <tr class="paciente" id="primeiro-paciente">
+                        <td class="info-nomeP">Kauan Vinnicius</td>
+                        <td class="info-nomeM">Fernado</td>
+                        <td class="info-horario">15:00</td>
+                        <td class="info-data">15-04-2023</td>
+                    </tr>
+                    <tr class="paciente">
+                        <td class="info-nomeP">Vitão</td>
+                        <td class="info-nomeM">Marcelo</td>
+                        <td class="info-horario">15:45</td>
+                        <td class="info-data">15-04-2023</td>
+                    </tr>
+                    <tr class="paciente">
+                        <td class="info-nomeP">Athila</td>
+                        <td class="info-nomeM">Fernado</td>
+                        <td class="info-horario">15:45</td>
+                        <td class="info-data">16-04-2023</td>
+                    </tr>
+                </tbody>
+              </table>
+            <button id="erro-ajax buscar-paciente" class="btn btn-primary bto-principal">Buscar Paciente</button>
+        </section>
+    </main>
+<br>
+<br>
+    <section class="container">
+        <h2 id="titulo-form">Adiciona novo paciente</h2>
+        <ul id="mensagem-erro"></ul>
+        <form class="row g-3 form-add" id="form-add">
+            <div class="col-12">
+              <label for="Nome" class="form-label">Nome:</label>
+              <input type="text" class="form-control campo" id="nomeP" name="nomeP" placeholder="Digite o seu nome">
+            </div>
+            <div class="col-12">
+              <label for="NomeM" class="form-label">Nome do médico</label>
+              <input type="text" class="form-control campo" id="nomeM" name="nomeM" placeholder="Digite o nome do médico">
+            </div>
+            <div class="col-md-6">
+              <label for="horario" class="form-label">Horário da consulta</label>
+              <input type="time" class="form-control campo campo-medio" id="horario" name="horario">
+            </div>
+            <div class="col-md-6">
+              <label for="inputState" class="form-label">Data da Consulta</label>
+              <input type="date" class="form-control campo campo-medio" id="data" name="data">
+              </select>
+            </div>
+            <div class="col-12">
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary bto-principal" id="add-paciente">Cadastrar</button>
+            </div>
+          </form>
+    </section>
+
+    <script src="js/form.js"></script>
+</body>
+</html>
